@@ -18,9 +18,9 @@ class NewsController extends GetxController {
     update();
   }
 
-  Future<List<Article>> getArticles() async {
+  Future<List<Article>> getArticles(String searchBy) async {
     var url = Uri.parse(
-        'https://newsapi.org/v2/everything?q=tesla&from=2022-06-15&sortBy=publishedAt&apiKey=9ff4fdd6066649d1bba339f2b449fb29');
+        'https://newsapi.org/v2/everything?q=${searchBy}a&from=2022-06-15&sortBy=publishedAt&apiKey=9ff4fdd6066649d1bba339f2b449fb29');
     http.Response res = await http.get(url);
     if (res.statusCode == 200) {
       Map<String, dynamic> json = jsonDecode(res.body);

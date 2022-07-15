@@ -33,7 +33,7 @@ class NewsScreen extends StatelessWidget {
       body: Container(
         // padding: const EdgeInsets.all(10),
         child: FutureBuilder(
-            future: controller.getArticles(),
+            future: controller.getArticles("sports"),
             builder:
                 (BuildContext context, AsyncSnapshot<List<Article>> snapshot) {
               if (snapshot.hasData) {
