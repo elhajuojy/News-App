@@ -1,6 +1,5 @@
-# newapp_
-
-A new Flutter project.
+# News App
+News app using newsapi org
 
 ## Getting Started
 
