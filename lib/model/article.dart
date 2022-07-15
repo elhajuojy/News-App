@@ -18,14 +18,14 @@ class Article {
     this.title,
     this.description,
     this.url,
-    this.urlToImage,
+    required this.urlToImage,
     this.content,
     this.publishedAt,
   });
 
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
-      source: Source.fromsjon(jsonDecode(json['source'])),
+      source: Source.fromsjon(json['source']),
       author: json['author'] as String?,
       title: json['title'] as String?,
       description: json['description'] as String?,

@@ -4,6 +4,9 @@ class Source {
   Source({this.id, this.name});
 
   factory Source.fromsjon(Map<String, dynamic> json) {
-    return Source(id: json['id'], name: json['name']);
+    return Source(
+      id: json['id'],
+      name: json['name'],
+    );
   }
 }
