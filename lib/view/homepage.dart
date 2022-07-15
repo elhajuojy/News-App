@@ -11,14 +11,21 @@ class HomePage extends StatelessWidget {
     return GetBuilder<HomePageController>(builder: (context) {
       return Scaffold(
         appBar: AppBar(
-          title: Text("App News"),
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.search_rounded,
-                ))
+          title: const Text(
+            "News App",
+            // style: TextStyle(color: Colors.red),
+          ),
+          actions: const [
+            Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: Icon(
+                Icons.search,
+                size: 35,
+                color: Colors.black,
+              ),
+            )
           ],
+          centerTitle: true,
         ),
         body: controller.listScreens[controller.currentIndex],
         bottomNavigationBar: BottomNavigationBar(

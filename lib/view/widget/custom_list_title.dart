@@ -57,7 +57,8 @@ class CustomListTile extends StatelessWidget {
                     ),
                     Expanded(
                         child: Text(
-                      article.publishedAt.toString(),
+                      // article.publishedAt.toString(),
+                      controller.dateformate(article.publishedAt.toString()),
                       textAlign: TextAlign.right,
                     ))
                   ],

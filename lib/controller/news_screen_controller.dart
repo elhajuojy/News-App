@@ -4,10 +4,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:newapp_/model/article.dart';
 
 class NewsController extends GetxController {
   IconData favIcon = Icons.favorite_border_outlined;
+
+  String dateformate(String datee) {
+    DateTime theday = DateTime.parse(datee);
+    String formattedDate = DateFormat.yMMMEd().format(theday);
+    return formattedDate;
+  }
 
   IconFaveChanger() {
     favIcon = favIcon == Icons.favorite_border
