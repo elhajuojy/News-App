@@ -15,15 +15,16 @@ class CustomListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     NewsController controller = Get.put(NewsController());
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 3),
       child: InkWell(
         onTap: () {
           //TODO when the user click on the card he need to visit the article site
           // article.url;
         },
         child: Card(
+          elevation: 0.5,
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(7.0),
             child: Column(
               children: [
                 Text(
@@ -52,7 +53,7 @@ class CustomListTile extends StatelessWidget {
                     const SizedBox(width: 10),
                     const Icon(
                       Icons.comment_outlined,
-                      color: Colors.red,
+                      // color: Colors.red,
                     ),
                     Expanded(
                         child: Text(

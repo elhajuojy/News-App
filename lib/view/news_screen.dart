@@ -31,7 +31,7 @@ class NewsScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Container(
-        padding: const EdgeInsets.all(10),
+        // padding: const EdgeInsets.all(10),
         child: FutureBuilder(
             future: controller.getArticles(),
             builder:
