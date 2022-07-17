@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:newapp_/core/theme_2.dart';
+
 import 'package:newapp_/view/homepage.dart';
 import 'package:newapp_/view/news_screen.dart';
 
